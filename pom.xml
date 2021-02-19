@@ -7,9 +7,8 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>monappli</name>
 	<scm>
-		<connection>scm:svn:http://somerepository.com/svn_repo/trunk</connection>
-		<developerConnection>scm:svn:https://somerepository.com/svn_repo/trunk</developerConnection>
-		<url>http://somerepository.com/view.cvs</url>
+		<connection>scm:git:https://github.com/DaviJam/testMaven.git</connection>
+		<url>https://github.com/DaviJam/testMaven.git</url>
 	</scm>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
@@ -32,6 +31,14 @@
 		<pluginManagement>
 			<!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
 			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-scm-plugin</artifactId>
+					<version>1.11.2</version>
+					<configuration>
+						<connectionType>connection</connectionType>
+					</configuration>
+				</plugin>
 				<!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
